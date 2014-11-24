@@ -8,7 +8,14 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+enum CollisionType: UInt32 {
+    case Edge   = 1
+    case Player = 2
+    case Bullet = 4
+    case Enemy  = 8
+}
+
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var player: SKSpriteNode?
     
@@ -21,15 +28,37 @@ class GameScene: SKScene {
     var lastShotFired: CFTimeInterval = 0
     
     override func didMoveToView(view: SKView) {
+        /* Initialize physics for scene */
+        self.physicsWorld.contactDelegate = self
+        self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
+        self.physicsBody?.categoryBitMask = CollisionType.Edge.rawValue
+        
+        /* Intialize physics for a single shot */
+        shot.physicsBody = SKPhysicsBody(rectangleOfSize: shot.size)
+        shot.physicsBody?.categoryBitMask = CollisionType.Bullet.rawValue
+        shot.physicsBody?.collisionBitMask = 0 // Make sure the bullet isn't affected by the collision
+        shot.physicsBody?.affectedByGravity = false
+        shot.physicsBody?.contactTestBitMask = CollisionType.Edge.rawValue
+        
+        /* Add player + enemies to scene. Both have their physics settings defined in the SKS file */
         if let childNode = self.childNodeWithName("player") as? SKSpriteNode {
             self.player = childNode
         }
         
         if let children = GameScene.unarchiveFromFile("Level1")?.children {
+            let enemyGroup: SKNode = SKNode()
             for child: AnyObject in children {
-                self.addChild(child.copy() as SKNode)
+                child.physicsBody??.categoryBitMask = CollisionType.Enemy.rawValue
+                child.physicsBody??.collisionBitMask = 0
+                child.physicsBody??.contactTestBitMask = CollisionType.Bullet.rawValue
+                enemyGroup.addChild(child.copy() as SKNode)
             }
+            self.addChild(enemyGroup)
         }
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -82,7 +111,8 @@ class GameScene: SKScene {
         /* Handle shooting, like a boss */
         if self.isShooting && (currentTime - self.lastShotFired > 0.3) {
             var shotPosition = self.player?.position
-            shotPosition!.y += 65
+            shotPosition!.y += 70
+            
             let newShot = shot.copy() as SKSpriteNode
             newShot.position = shotPosition!
             self.addChild(newShot)
