@@ -16,6 +16,9 @@ class GameScene: SKScene {
     var isMovingRight: Bool = false
     var isShooting: Bool = false
 
+    var shot: SKSpriteNode = SKSpriteNode(imageNamed: "laserRed01")
+    
+    var lastShotFired: CFTimeInterval = 0
     
     override func didMoveToView(view: SKView) {
         if let childNode = self.childNodeWithName("player") as? SKSpriteNode {
@@ -41,6 +44,19 @@ class GameScene: SKScene {
         }
         
         self.player?.position = newPosition!
+        
+        /* Handle shooting, like a boss */
+        if self.isShooting && (currentTime - self.lastShotFired > 0.3) {
+            var shotPosition = self.player?.position
+            shotPosition!.y += 65
+            let newShot = shot.copy() as SKSpriteNode
+            newShot.position = shotPosition!
+            self.addChild(newShot)
+            
+            let action: SKAction = SKAction.moveByX(0, y: 600, duration: 1.0)
+            newShot.runAction(SKAction.repeatActionForever(action))
+            self.lastShotFired = currentTime;
+        }
     }
     
     override func keyDown(theEvent: NSEvent) {
