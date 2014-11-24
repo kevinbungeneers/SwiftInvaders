@@ -13,6 +13,9 @@
 		0A4E14671A23CD1B0097DACD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14661A23CD1B0097DACD /* Images.xcassets */; };
 		0A4E146A1A23CD1B0097DACD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14681A23CD1B0097DACD /* MainMenu.xib */; };
 		0A4E14761A23CD1B0097DACD /* SwiftInvadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E14751A23CD1B0097DACD /* SwiftInvadersTests.swift */; };
+		0A4E14821A23D04A0097DACD /* Enemies.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E147F1A23D04A0097DACD /* Enemies.atlas */; };
+		0A4E14831A23D04A0097DACD /* Lasers.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14801A23D04A0097DACD /* Lasers.atlas */; };
+		0A4E14841A23D04A0097DACD /* PlayerShip.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14811A23D04A0097DACD /* PlayerShip.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		0A4E146F1A23CD1B0097DACD /* SwiftInvadersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftInvadersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4E14741A23CD1B0097DACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A4E14751A23CD1B0097DACD /* SwiftInvadersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftInvadersTests.swift; sourceTree = "<group>"; };
+		0A4E147F1A23D04A0097DACD /* Enemies.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Enemies.atlas; sourceTree = "<group>"; };
+		0A4E14801A23D04A0097DACD /* Lasers.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Lasers.atlas; sourceTree = "<group>"; };
+		0A4E14811A23D04A0097DACD /* PlayerShip.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerShip.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,9 @@
 		0A4E145D1A23CD1B0097DACD /* SwiftInvaders */ = {
 			isa = PBXGroup;
 			children = (
+				0A4E147F1A23D04A0097DACD /* Enemies.atlas */,
+				0A4E14801A23D04A0097DACD /* Lasers.atlas */,
+				0A4E14811A23D04A0097DACD /* PlayerShip.atlas */,
 				0A4E14601A23CD1B0097DACD /* AppDelegate.swift */,
 				0A4E14621A23CD1B0097DACD /* GameScene.swift */,
 				0A4E14641A23CD1B0097DACD /* GameScene.sks */,
@@ -192,8 +201,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A4E14841A23D04A0097DACD /* PlayerShip.atlas in Resources */,
 				0A4E14651A23CD1B0097DACD /* GameScene.sks in Resources */,
 				0A4E14671A23CD1B0097DACD /* Images.xcassets in Resources */,
+				0A4E14831A23D04A0097DACD /* Lasers.atlas in Resources */,
+				0A4E14821A23D04A0097DACD /* Enemies.atlas in Resources */,
 				0A4E146A1A23CD1B0097DACD /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
