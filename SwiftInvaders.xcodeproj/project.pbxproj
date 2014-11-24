@@ -16,6 +16,7 @@
 		0A4E14821A23D04A0097DACD /* Enemies.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E147F1A23D04A0097DACD /* Enemies.atlas */; };
 		0A4E14831A23D04A0097DACD /* Lasers.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14801A23D04A0097DACD /* Lasers.atlas */; };
 		0A4E14841A23D04A0097DACD /* PlayerShip.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14811A23D04A0097DACD /* PlayerShip.atlas */; };
+		0A4E14871A23E1E40097DACD /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14861A23E1E40097DACD /* Level1.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		0A4E147F1A23D04A0097DACD /* Enemies.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Enemies.atlas; sourceTree = "<group>"; };
 		0A4E14801A23D04A0097DACD /* Lasers.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Lasers.atlas; sourceTree = "<group>"; };
 		0A4E14811A23D04A0097DACD /* PlayerShip.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerShip.atlas; sourceTree = "<group>"; };
+		0A4E14861A23E1E40097DACD /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		0A4E145D1A23CD1B0097DACD /* SwiftInvaders */ = {
 			isa = PBXGroup;
 			children = (
+				0A4E14851A23E1CF0097DACD /* Levels */,
 				0A4E147F1A23D04A0097DACD /* Enemies.atlas */,
 				0A4E14801A23D04A0097DACD /* Lasers.atlas */,
 				0A4E14811A23D04A0097DACD /* PlayerShip.atlas */,
@@ -119,6 +122,14 @@
 				0A4E14741A23CD1B0097DACD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A4E14851A23E1CF0097DACD /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				0A4E14861A23E1E40097DACD /* Level1.sks */,
+			);
+			name = Levels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 				0A4E14831A23D04A0097DACD /* Lasers.atlas in Resources */,
 				0A4E14821A23D04A0097DACD /* Enemies.atlas in Resources */,
 				0A4E146A1A23CD1B0097DACD /* MainMenu.xib in Resources */,
+				0A4E14871A23E1E40097DACD /* Level1.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
