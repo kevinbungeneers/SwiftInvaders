@@ -13,11 +13,15 @@ enum CollisionType: UInt32 {
     case Player = 2
     case Bullet = 4
     case Enemy  = 8
+    case EnemyGroup = 16
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var player: SKSpriteNode?
+    let enemyGroup: SKNode = SKNode()
+    var enemyGroupMovementSpeed: CGFloat = 6.0
+    var dropEnemies: Bool = false
     
     var isMovingLeft: Bool = false
     var isMovingRight: Bool = false
@@ -46,12 +50,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         if let children = GameScene.unarchiveFromFile("Level1")?.children {
-            let enemyGroup: SKNode = SKNode()
             for child: AnyObject in children {
-                child.physicsBody??.categoryBitMask = CollisionType.Enemy.rawValue
-                child.physicsBody??.collisionBitMask = 0
-                child.physicsBody??.contactTestBitMask = CollisionType.Bullet.rawValue
-                enemyGroup.addChild(child.copy() as SKNode)
+                let newChild = child.copy() as SKNode
+                newChild.physicsBody?.categoryBitMask = CollisionType.Enemy.rawValue
+                newChild.physicsBody?.collisionBitMask = 0
+                newChild.physicsBody?.contactTestBitMask = CollisionType.Bullet.rawValue | CollisionType.Edge.rawValue
+                enemyGroup.addChild(newChild)
             }
             self.addChild(enemyGroup)
         }
@@ -74,11 +78,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 first.node?.removeFromParent()
             }
         }
+        
+        if first.categoryBitMask == CollisionType.Edge.rawValue {
+            if second.categoryBitMask == CollisionType.Enemy.rawValue {
+                self.enemyGroupMovementSpeed *= -1
+                self.dropEnemies = true
+            }
+        }
     }
     
     override func update(currentTime: CFTimeInterval) {
         self.handleMovement()
         self.handleShooting(currentTime)
+        self.moveEnemies()
     }
     
     override func keyDown(theEvent: NSEvent) {
@@ -135,6 +147,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let action: SKAction = SKAction.moveByX(0, y: 600, duration: 1.0)
             newShot.runAction(SKAction.repeatActionForever(action))
             self.lastShotFired = currentTime;
+        }
+    }
+    
+    func moveEnemies() {
+        self.enemyGroup.position.x = self.enemyGroup.position.x + self.enemyGroupMovementSpeed
+        if self.dropEnemies {
+            println("drop")
+            let dropAction: SKAction = SKAction.moveByX(0, y: -10, duration: 0.3)
+            enemyGroup.runAction(dropAction)
+            self.dropEnemies = false
         }
     }
 }
