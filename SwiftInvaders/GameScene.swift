@@ -58,7 +58,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
+        var first: SKPhysicsBody = contact.bodyA
+        var second: SKPhysicsBody = contact.bodyB
+
+        if first.categoryBitMask > second.categoryBitMask {
+            second = contact.bodyA
+            first = contact.bodyB
+        }
         
+        if first.categoryBitMask == CollisionType.Bullet.rawValue {
+            if second.categoryBitMask == CollisionType.Enemy.rawValue {
+                first.node?.removeFromParent()
+                second.node?.removeFromParent()
+            } else if second.categoryBitMask == CollisionType.Enemy.rawValue {
+                first.node?.removeFromParent()
+            }
+        }
     }
     
     override func update(currentTime: CFTimeInterval) {
