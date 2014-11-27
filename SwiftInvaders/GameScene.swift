@@ -61,6 +61,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             self.addChild(enemyGroup)
         }
+        
+        
+        let star: SKEmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("Star", ofType: "sks")!) as SKEmitterNode
+        star.position.y = 1024
+        star.position.x = 768
+        
+        self.addChild(star)
     }
     
     func didBeginContact(contact: SKPhysicsContact) {

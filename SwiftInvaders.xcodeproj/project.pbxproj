@@ -17,6 +17,8 @@
 		0A4E14831A23D04A0097DACD /* Lasers.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14801A23D04A0097DACD /* Lasers.atlas */; };
 		0A4E14841A23D04A0097DACD /* PlayerShip.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14811A23D04A0097DACD /* PlayerShip.atlas */; };
 		0A4E14871A23E1E40097DACD /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14861A23E1E40097DACD /* Level1.sks */; };
+		0A4E148B1A27B8670097DACD /* Star.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14891A27B8670097DACD /* Star.sks */; };
+		0A4E148C1A27B8670097DACD /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E148A1A27B8670097DACD /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		0A4E14801A23D04A0097DACD /* Lasers.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Lasers.atlas; sourceTree = "<group>"; };
 		0A4E14811A23D04A0097DACD /* PlayerShip.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerShip.atlas; sourceTree = "<group>"; };
 		0A4E14861A23E1E40097DACD /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
+		0A4E14891A27B8670097DACD /* Star.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Star.sks; sourceTree = "<group>"; };
+		0A4E148A1A27B8670097DACD /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		0A4E145D1A23CD1B0097DACD /* SwiftInvaders */ = {
 			isa = PBXGroup;
 			children = (
+				0A4E14881A27B8480097DACD /* Particles */,
 				0A4E14851A23E1CF0097DACD /* Levels */,
 				0A4E147F1A23D04A0097DACD /* Enemies.atlas */,
 				0A4E14801A23D04A0097DACD /* Lasers.atlas */,
@@ -130,6 +135,15 @@
 				0A4E14861A23E1E40097DACD /* Level1.sks */,
 			);
 			name = Levels;
+			sourceTree = "<group>";
+		};
+		0A4E14881A27B8480097DACD /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				0A4E14891A27B8670097DACD /* Star.sks */,
+				0A4E148A1A27B8670097DACD /* spark.png */,
+			);
+			name = Particles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A4E14841A23D04A0097DACD /* PlayerShip.atlas in Resources */,
+				0A4E148C1A27B8670097DACD /* spark.png in Resources */,
+				0A4E148B1A27B8670097DACD /* Star.sks in Resources */,
 				0A4E14651A23CD1B0097DACD /* GameScene.sks in Resources */,
 				0A4E14671A23CD1B0097DACD /* Images.xcassets in Resources */,
 				0A4E14831A23D04A0097DACD /* Lasers.atlas in Resources */,
@@ -425,6 +441,7 @@
 				0A4E147B1A23CD1B0097DACD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A4E147C1A23CD1B0097DACD /* Build configuration list for PBXNativeTarget "SwiftInvadersTests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +450,7 @@
 				0A4E147E1A23CD1B0097DACD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
