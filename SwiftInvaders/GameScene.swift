@@ -49,6 +49,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Add player + enemies to scene. Both have their physics settings defined in the SKS file */
         if let childNode = self.childNodeWithName("player") as? SKSpriteNode {
             self.player = childNode
+            let thruster: SKEmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("Thruster", ofType: "sks")!) as SKEmitterNode
+            thruster.position.y = -40
+            self.player?.addChild(thruster)
         }
         
         if let children = GameScene.unarchiveFromFile("Level1")?.children {
@@ -163,9 +166,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func initParallaxBackground() {
-        let star: SKEmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("Star", ofType: "sks")!) as SKEmitterNode
-        star.position = CGPointMake(self.size.width / 2, self.size.height)
-        star.zPosition = -10
-        self.addChild(star)
+        let background: SKEmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("Background", ofType: "sks")!) as SKEmitterNode
+        background.position = CGPointMake(self.size.width / 2, self.size.height)
+        background.zPosition = -10
+        background.advanceSimulationTime(10)
+        self.addChild(background)
     }
 }

@@ -17,8 +17,9 @@
 		0A4E14831A23D04A0097DACD /* Lasers.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14801A23D04A0097DACD /* Lasers.atlas */; };
 		0A4E14841A23D04A0097DACD /* PlayerShip.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14811A23D04A0097DACD /* PlayerShip.atlas */; };
 		0A4E14871A23E1E40097DACD /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14861A23E1E40097DACD /* Level1.sks */; };
-		0A4E148B1A27B8670097DACD /* Star.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14891A27B8670097DACD /* Star.sks */; };
 		0A4E148C1A27B8670097DACD /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E148A1A27B8670097DACD /* spark.png */; };
+		0A4E148E1A27C4210097DACD /* Thruster.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E148D1A27C4210097DACD /* Thruster.sks */; };
+		0A4E14921A27CD0E0097DACD /* Background.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14911A27CD0E0097DACD /* Background.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,9 @@
 		0A4E14801A23D04A0097DACD /* Lasers.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Lasers.atlas; sourceTree = "<group>"; };
 		0A4E14811A23D04A0097DACD /* PlayerShip.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerShip.atlas; sourceTree = "<group>"; };
 		0A4E14861A23E1E40097DACD /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
-		0A4E14891A27B8670097DACD /* Star.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Star.sks; sourceTree = "<group>"; };
 		0A4E148A1A27B8670097DACD /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		0A4E148D1A27C4210097DACD /* Thruster.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Thruster.sks; sourceTree = "<group>"; };
+		0A4E14911A27CD0E0097DACD /* Background.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Background.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +142,9 @@
 		0A4E14881A27B8480097DACD /* Particles */ = {
 			isa = PBXGroup;
 			children = (
-				0A4E14891A27B8670097DACD /* Star.sks */,
 				0A4E148A1A27B8670097DACD /* spark.png */,
+				0A4E148D1A27C4210097DACD /* Thruster.sks */,
+				0A4E14911A27CD0E0097DACD /* Background.sks */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -228,11 +231,12 @@
 			files = (
 				0A4E14841A23D04A0097DACD /* PlayerShip.atlas in Resources */,
 				0A4E148C1A27B8670097DACD /* spark.png in Resources */,
-				0A4E148B1A27B8670097DACD /* Star.sks in Resources */,
 				0A4E14651A23CD1B0097DACD /* GameScene.sks in Resources */,
 				0A4E14671A23CD1B0097DACD /* Images.xcassets in Resources */,
 				0A4E14831A23D04A0097DACD /* Lasers.atlas in Resources */,
+				0A4E148E1A27C4210097DACD /* Thruster.sks in Resources */,
 				0A4E14821A23D04A0097DACD /* Enemies.atlas in Resources */,
+				0A4E14921A27CD0E0097DACD /* Background.sks in Resources */,
 				0A4E146A1A23CD1B0097DACD /* MainMenu.xib in Resources */,
 				0A4E14871A23E1E40097DACD /* Level1.sks in Resources */,
 			);
