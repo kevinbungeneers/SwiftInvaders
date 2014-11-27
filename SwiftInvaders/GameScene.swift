@@ -21,7 +21,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player: SKSpriteNode?
     
     let enemyGroup: SKNode = SKNode()
-    var enemyGroupMovementSpeed: CGFloat = 6.0
+    var enemyGroupMovementSpeed: CGFloat = 3.0
     var dropEnemies: Bool = false
     let dropAction: SKAction = SKAction.moveByX(0, y: -10, duration: 0.3)
 
@@ -146,7 +146,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             newShot.position = shotPosition!
             self.addChild(newShot)
             
-            let action: SKAction = SKAction.moveByX(0, y: 100, duration: 1.0)
+            let action: SKAction = SKAction.moveByX(0, y: 600, duration: 1.0)
             newShot.runAction(SKAction.repeatActionForever(action))
             self.lastShotFired = currentTime;
         }
