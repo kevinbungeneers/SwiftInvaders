@@ -62,12 +62,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.addChild(enemyGroup)
         }
         
-        
-        let star: SKEmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("Star", ofType: "sks")!) as SKEmitterNode
-        star.position.y = 1024
-        star.position.x = 768
-        
-        self.addChild(star)
+        self.initParallaxBackground()
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
@@ -165,5 +160,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             enemyGroup.runAction(dropAction)
             self.dropEnemies = false
         }
+    }
+    
+    func initParallaxBackground() {
+        let star: SKEmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("Star", ofType: "sks")!) as SKEmitterNode
+        star.position = CGPointMake(self.size.width / 2, self.size.height)
+        star.zPosition = -10
+        self.addChild(star)
     }
 }
