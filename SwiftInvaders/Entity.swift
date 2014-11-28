@@ -19,4 +19,8 @@ class Entity {
     init(sprite: SKSpriteNode) {
         self.sprite = sprite
     }
+    
+    internal func update(currentTime: CFTimeInterval) {
+        
+    }
 }

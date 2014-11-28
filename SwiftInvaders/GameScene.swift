@@ -25,12 +25,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var dropEnemies: Bool = false
     let dropAction: SKAction = SKAction.moveByX(0, y: -10, duration: 0.3)
 
-    var isMovingLeft: Bool = false
-    var isMovingRight: Bool = false
-    var isShooting: Bool = false
-    
-    var lastShotFired: CFTimeInterval = 0
-    
     override func didMoveToView(view: SKView) {
         self.initializePhysics();
         
@@ -89,8 +83,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override internal func update(currentTime: CFTimeInterval) {
-        self.handleMovement()
-        self.handleShooting(currentTime)
+        self.player.update(currentTime)
         self.moveEnemies()
     }
     
@@ -105,45 +98,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private func handleInput(keyCode: UInt16, active: Bool) {
         switch keyCode {
         case 123:
-            self.isMovingLeft = active
+            self.player.isMovingLeft = active
         case 124:
-            self.isMovingRight = active
+            self.player.isMovingRight = active
         case 49:
-            self.isShooting = active
+            self.player.isShooting = active
         default:
             ()
-        }
-    }
-    
-    func handleMovement() {
-        var newPosition = self.player.sprite.position
-        if self.isMovingLeft {
-            newPosition.x -= 10
-            if newPosition.x < (self.player.sprite.frame.width) / 2 {
-                newPosition.x = (self.player.sprite.frame.width) / 2
-            }
-        }
-        
-        if self.isMovingRight {
-            newPosition.x += 10
-            if newPosition.x > (self.frame.width - (self.player.sprite.frame.width) / 2) {
-                newPosition.x = self.size.width - (self.player.sprite.frame.width) / 2
-            }
-        }
-        
-        self.player.sprite.position = newPosition
-    }
-    
-    func handleShooting(currentTime: CFTimeInterval) {
-        /* Handle shooting, like a boss */
-        if self.isShooting && (currentTime - self.lastShotFired > 0.3) {
-            var shotPosition = self.player.sprite.position
-            shotPosition.y += 70
-            
-            let shot: Laser = Laser(position: shotPosition)
-            self.addChild(shot.sprite)
-            
-            self.lastShotFired = currentTime;
         }
     }
     

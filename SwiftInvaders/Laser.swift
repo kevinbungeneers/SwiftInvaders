@@ -14,10 +14,6 @@ class Laser: Entity {
         self.init(spriteName: "laserRed01")
     }
     
-    convenience init(position: CGPoint) {
-        self.init(spriteName: "laserRed01")
-        self.launch(position)
-    }
     
     override init(spriteName: String) {
         super.init(spriteName: spriteName)
@@ -29,10 +25,12 @@ class Laser: Entity {
         self.sprite.physicsBody?.contactTestBitMask = CollisionType.Edge.rawValue
     }
     
-    internal func launch(position: CGPoint) {
-        self.sprite.position = position
+    internal func fire(position: CGPoint, parent: SKNode) {
+        let copy = self.sprite.copy() as SKSpriteNode
+        copy.position = position
+        parent.addChild(copy)
         let action: SKAction = SKAction.moveByX(0, y: 600, duration: 1.0)
-        self.sprite.runAction(SKAction.repeatActionForever(action))
+        copy.runAction(SKAction.repeatActionForever(action))
     }
     
 }
