@@ -43,7 +43,7 @@ class Player: Entity {
             if self.isMovingRight {
                 currentPosition.x += 10
                 if currentPosition.x > (parent.frame.width - (self.sprite.frame.width) / 2) {
-                    currentPosition.x = self.sprite.size.width - (self.sprite.frame.width / 2)
+                    currentPosition.x = parent.frame.width - (self.sprite.frame.width / 2)
                 }
                 self.sprite.position = currentPosition
             }
