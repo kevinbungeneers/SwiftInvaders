@@ -23,6 +23,8 @@
 		0A4E14971A2909370097DACD /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E14961A2909370097DACD /* Entity.swift */; };
 		0A4E14991A2909BB0097DACD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E14981A2909BB0097DACD /* Player.swift */; };
 		0A4E149B1A290B700097DACD /* Laser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E149A1A290B700097DACD /* Laser.swift */; };
+		0AD464E81A2D1CB6005D89EE /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD464E71A2D1CB6005D89EE /* Level1.swift */; };
+		0AD464EC1A2D1D7E005D89EE /* GenericLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD464EB1A2D1D7E005D89EE /* GenericLevel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		0A4E14961A2909370097DACD /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		0A4E14981A2909BB0097DACD /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		0A4E149A1A290B700097DACD /* Laser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Laser.swift; sourceTree = "<group>"; };
+		0AD464E71A2D1CB6005D89EE /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
+		0AD464EB1A2D1D7E005D89EE /* GenericLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericLevel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				0A4E14861A23E1E40097DACD /* Level1.sks */,
+				0AD464E71A2D1CB6005D89EE /* Level1.swift */,
+				0AD464EB1A2D1D7E005D89EE /* GenericLevel.swift */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -273,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD464E81A2D1CB6005D89EE /* Level1.swift in Sources */,
+				0AD464EC1A2D1D7E005D89EE /* GenericLevel.swift in Sources */,
 				0A4E14991A2909BB0097DACD /* Player.swift in Sources */,
 				0A4E14971A2909370097DACD /* Entity.swift in Sources */,
 				0A4E14631A23CD1B0097DACD /* GameScene.swift in Sources */,
