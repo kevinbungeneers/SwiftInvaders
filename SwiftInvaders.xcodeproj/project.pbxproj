@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0A4E14611A23CD1B0097DACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E14601A23CD1B0097DACD /* AppDelegate.swift */; };
-		0A4E14631A23CD1B0097DACD /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E14621A23CD1B0097DACD /* GameScene.swift */; };
-		0A4E14651A23CD1B0097DACD /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14641A23CD1B0097DACD /* GameScene.sks */; };
 		0A4E14671A23CD1B0097DACD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14661A23CD1B0097DACD /* Images.xcassets */; };
 		0A4E146A1A23CD1B0097DACD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A4E14681A23CD1B0097DACD /* MainMenu.xib */; };
 		0A4E14761A23CD1B0097DACD /* SwiftInvadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E14751A23CD1B0097DACD /* SwiftInvadersTests.swift */; };
@@ -23,6 +21,10 @@
 		0A4E14971A2909370097DACD /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E14961A2909370097DACD /* Entity.swift */; };
 		0A4E14991A2909BB0097DACD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E14981A2909BB0097DACD /* Player.swift */; };
 		0A4E149B1A290B700097DACD /* Laser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E149A1A290B700097DACD /* Laser.swift */; };
+		0A556FC81A4EBC4700F5FFDD /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0A556FC71A4EBC4700F5FFDD /* StartScene.sks */; };
+		0A556FCA1A4EC53900F5FFDD /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A556FC91A4EC53900F5FFDD /* StartScene.swift */; };
+		0A8577DB1A537D4B0017C2A0 /* SwiftInvaders_TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8577DA1A537D4B0017C2A0 /* SwiftInvaders_TitleScreen.png */; };
+		0A8577DD1A53826D0017C2A0 /* SwiftInvaders_PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8577DC1A53826D0017C2A0 /* SwiftInvaders_PlayButton.png */; };
 		0AD464E81A2D1CB6005D89EE /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD464E71A2D1CB6005D89EE /* Level1.swift */; };
 		0AD464EC1A2D1D7E005D89EE /* GenericLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD464EB1A2D1D7E005D89EE /* GenericLevel.swift */; };
 /* End PBXBuildFile section */
@@ -41,8 +43,6 @@
 		0A4E145B1A23CD1B0097DACD /* SwiftInvaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftInvaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4E145F1A23CD1B0097DACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A4E14601A23CD1B0097DACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A4E14621A23CD1B0097DACD /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		0A4E14641A23CD1B0097DACD /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		0A4E14661A23CD1B0097DACD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0A4E14691A23CD1B0097DACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0A4E146F1A23CD1B0097DACD /* SwiftInvadersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftInvadersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +58,10 @@
 		0A4E14961A2909370097DACD /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		0A4E14981A2909BB0097DACD /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		0A4E149A1A290B700097DACD /* Laser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Laser.swift; sourceTree = "<group>"; };
+		0A556FC71A4EBC4700F5FFDD /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
+		0A556FC91A4EC53900F5FFDD /* StartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		0A8577DA1A537D4B0017C2A0 /* SwiftInvaders_TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftInvaders_TitleScreen.png; sourceTree = "<group>"; };
+		0A8577DC1A53826D0017C2A0 /* SwiftInvaders_PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftInvaders_PlayButton.png; sourceTree = "<group>"; };
 		0AD464E71A2D1CB6005D89EE /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
 		0AD464EB1A2D1D7E005D89EE /* GenericLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericLevel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,15 +105,12 @@
 		0A4E145D1A23CD1B0097DACD /* SwiftInvaders */ = {
 			isa = PBXGroup;
 			children = (
+				0A8577D91A537D2F0017C2A0 /* Assets */,
+				0A556FC61A4EBC3100F5FFDD /* Scenes */,
 				0A4E14931A29080F0097DACD /* Entities */,
 				0A4E14881A27B8480097DACD /* Particles */,
 				0A4E14851A23E1CF0097DACD /* Levels */,
-				0A4E147F1A23D04A0097DACD /* Enemies.atlas */,
-				0A4E14801A23D04A0097DACD /* Lasers.atlas */,
-				0A4E14811A23D04A0097DACD /* PlayerShip.atlas */,
 				0A4E14601A23CD1B0097DACD /* AppDelegate.swift */,
-				0A4E14621A23CD1B0097DACD /* GameScene.swift */,
-				0A4E14641A23CD1B0097DACD /* GameScene.sks */,
 				0A4E14661A23CD1B0097DACD /* Images.xcassets */,
 				0A4E14681A23CD1B0097DACD /* MainMenu.xib */,
 				0A4E145E1A23CD1B0097DACD /* Supporting Files */,
@@ -170,6 +171,27 @@
 				0A4E149A1A290B700097DACD /* Laser.swift */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		0A556FC61A4EBC3100F5FFDD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0A556FC71A4EBC4700F5FFDD /* StartScene.sks */,
+				0A556FC91A4EC53900F5FFDD /* StartScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		0A8577D91A537D2F0017C2A0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0A8577DC1A53826D0017C2A0 /* SwiftInvaders_PlayButton.png */,
+				0A8577DA1A537D4B0017C2A0 /* SwiftInvaders_TitleScreen.png */,
+				0A4E147F1A23D04A0097DACD /* Enemies.atlas */,
+				0A4E14801A23D04A0097DACD /* Lasers.atlas */,
+				0A4E14811A23D04A0097DACD /* PlayerShip.atlas */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,12 +276,14 @@
 			files = (
 				0A4E14841A23D04A0097DACD /* PlayerShip.atlas in Resources */,
 				0A4E148C1A27B8670097DACD /* spark.png in Resources */,
-				0A4E14651A23CD1B0097DACD /* GameScene.sks in Resources */,
 				0A4E14671A23CD1B0097DACD /* Images.xcassets in Resources */,
 				0A4E14831A23D04A0097DACD /* Lasers.atlas in Resources */,
 				0A4E148E1A27C4210097DACD /* Thruster.sks in Resources */,
+				0A8577DD1A53826D0017C2A0 /* SwiftInvaders_PlayButton.png in Resources */,
 				0A4E14821A23D04A0097DACD /* Enemies.atlas in Resources */,
 				0A4E14921A27CD0E0097DACD /* Background.sks in Resources */,
+				0A556FC81A4EBC4700F5FFDD /* StartScene.sks in Resources */,
+				0A8577DB1A537D4B0017C2A0 /* SwiftInvaders_TitleScreen.png in Resources */,
 				0A4E146A1A23CD1B0097DACD /* MainMenu.xib in Resources */,
 				0A4E14871A23E1E40097DACD /* Level1.sks in Resources */,
 			);
@@ -283,9 +307,9 @@
 				0AD464EC1A2D1D7E005D89EE /* GenericLevel.swift in Sources */,
 				0A4E14991A2909BB0097DACD /* Player.swift in Sources */,
 				0A4E14971A2909370097DACD /* Entity.swift in Sources */,
-				0A4E14631A23CD1B0097DACD /* GameScene.swift in Sources */,
 				0A4E149B1A290B700097DACD /* Laser.swift in Sources */,
 				0A4E14611A23CD1B0097DACD /* AppDelegate.swift in Sources */,
+				0A556FCA1A4EC53900F5FFDD /* StartScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

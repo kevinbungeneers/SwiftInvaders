@@ -1,18 +1,14 @@
 //
-//  GameScene.swift
+//  StartScene.swift
 //  SwiftInvaders
 //
-//  Created by Kevin Bungeneers on 24/11/14.
+//  Created by Kevin Bungeneers on 27/12/14.
 //  Copyright (c) 2014 Kevin Bungeneers. All rights reserved.
 //
 
 import SpriteKit
 
-
-
-class GameScene: SKScene {
-    
-
+class StartScene: SKScene {
     override func keyDown(theEvent: NSEvent) {
         if theEvent.keyCode == 36 {
             
