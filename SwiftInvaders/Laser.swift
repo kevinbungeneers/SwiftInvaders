@@ -26,7 +26,7 @@ class Laser: Entity {
     }
     
     internal func fire(position: CGPoint, parent: SKNode) {
-        let copy = self.sprite.copy() as SKSpriteNode
+        let copy = self.sprite.copy() as! SKSpriteNode
         copy.position = position
         parent.addChild(copy)
         let action: SKAction = SKAction.moveByX(0, y: 600, duration: 1.0)

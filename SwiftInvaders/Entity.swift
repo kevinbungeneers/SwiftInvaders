@@ -10,7 +10,7 @@ import SpriteKit
 
 class Entity {
     
-    let sprite: SKSpriteNode = SKSpriteNode()
+    var sprite: SKSpriteNode = SKSpriteNode()
     
     init(spriteName: String) {
         self.sprite = SKSpriteNode(imageNamed: spriteName)

@@ -37,7 +37,7 @@ class GenericLevel: SKScene, SKPhysicsContactDelegate {
         
         if let enemyGroup = self.childNodeWithName("enemyGroup") {
             for child: AnyObject in enemyGroup.children {
-                let enemy = child as SKNode
+                let enemy = child as! SKNode
                 enemy.physicsBody?.categoryBitMask = CollisionType.Enemy.rawValue
                 enemy.physicsBody?.collisionBitMask = 0
                 enemy.physicsBody?.contactTestBitMask = CollisionType.Bullet.rawValue | CollisionType.Edge.rawValue
@@ -60,7 +60,7 @@ class GenericLevel: SKScene, SKPhysicsContactDelegate {
     }
     
     private func initializeParallaxBackground() {
-        let background: SKEmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("Background", ofType: "sks")!) as SKEmitterNode
+        let background: SKEmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("Background", ofType: "sks")!) as! SKEmitterNode
         background.position = CGPointMake(self.size.width / 2, self.size.height)
         background.zPosition = -10
         background.advanceSimulationTime(10)

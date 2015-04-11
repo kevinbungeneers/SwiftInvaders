@@ -23,7 +23,7 @@ class Player: Entity {
     }
     
     internal func addThruster() {
-        let thruster: SKEmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("Thruster", ofType: "sks")!) as SKEmitterNode
+        let thruster: SKEmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource("Thruster", ofType: "sks")!) as! SKEmitterNode
         thruster.position.y = -40
         self.sprite.addChild(thruster)
     }
