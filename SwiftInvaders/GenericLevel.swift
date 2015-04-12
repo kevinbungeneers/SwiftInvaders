@@ -80,8 +80,6 @@ class GenericLevel: SKScene, SKPhysicsContactDelegate {
             if second.categoryBitMask == CollisionType.Enemy.rawValue {
                 first.node?.removeFromParent()
                 second.node?.removeFromParent()
-            } else if second.categoryBitMask == CollisionType.Enemy.rawValue {
-                first.node?.removeFromParent()
             }
         }
         
